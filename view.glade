@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<glade-interface>
+  <!-- interface-requires gtk+ 2.16 -->
+  <!-- interface-naming-policy toplevel-contextual -->
+  <widget class="GtkWindow" id="appwindow">
+    <property name="width_request">640</property>
+    <property name="height_request">480</property>
+    <property name="window_position">center</property>
+    <property name="default_width">640</property>
+    <property name="default_height">480</property>
+    <child>
+      <widget class="GtkFixed" id="appbg">
+        <property name="width_request">640</property>
+        <property name="height_request">480</property>
+        <property name="visible">True</property>
+        <child>
+          <widget class="GtkHBox" id="menu-box">
+            <property name="width_request">640</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <child>
+              <widget class="GtkButton" id="button-learning">
+                <property name="label" translatable="yes">button</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </widget>
+              <packing>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkButton" id="button-exercises">
+                <property name="label" translatable="yes">button</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </widget>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkButton" id="button-free">
+                <property name="label" translatable="yes">button</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </widget>
+              <packing>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkButton" id="button-statistics">
+                <property name="label" translatable="yes">button</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </widget>
+              <packing>
+                <property name="position">3</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkButton" id="button-database">
+                <property name="label" translatable="yes">button</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </widget>
+              <packing>
+                <property name="position">4</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkButton" id="button-exit">
+                <property name="label" translatable="yes">button</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </widget>
+              <packing>
+                <property name="position">5</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="y">400</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkFixed" id="appinteraction">
+            <property name="width_request">530</property>
+            <property name="height_request">370</property>
+            <child>
+              <widget class="GtkButton" id="button1">
+                <property name="label" translatable="yes">button</property>
+                <property name="width_request">100</property>
+                <property name="height_request">80</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </widget>
+              <packing>
+                <property name="x">148</property>
+                <property name="y">253</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="x">15</property>
+            <property name="y">15</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</glade-interface>
