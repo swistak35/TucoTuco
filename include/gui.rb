@@ -5,7 +5,7 @@ class Tuxlang
     @gui[:window].set_window_position("center")
     @gui[:window].set_default_size(640,480)
     @gui[:window].border_width=10
-    @gui[:window].set_title("Tuxlang")
+    @gui[:window].set_title("Tucotuco")
     @gui[:window].signal_connect('delete_event') { false }
     @gui[:window].signal_connect('destroy') { Gtk.main_quit }
   end

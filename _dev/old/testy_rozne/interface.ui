@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">Tuxlang</string>
+  </property>
+  <property name="toolTip">
+   <string/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>490</y>
+      <width>781</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="menu">
+     <item>
+      <widget class="QPushButton" name="learning_button">
+       <property name="text">
+        <string>Learning</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="exercise_button">
+       <property name="text">
+        <string>Exercises</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="results_button">
+       <property name="text">
+        <string>Results</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="database_button">
+       <property name="text">
+        <string>Database</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="options_button">
+       <property name="text">
+        <string>Options</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="exit_button">
+       <property name="text">
+        <string>Exit</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

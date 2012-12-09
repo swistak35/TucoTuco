@@ -1,19 +1,19 @@
 class Tuxlang
   def gui_opt_about_button
-    @gui[:opt_about_button]=Gtk::Button.new("About").set_size_request(200,50)
-    @gui[:opt_about_button].signal_connect("clicked") { about }
+    @gui[:opt_about_button]=Gtk::Button.new("O autorze").set_size_request(200,50)
+    @gui[:opt_about_button].signal_connect("clicked") { yield }
     @gui[:content].put(@gui[:opt_about_button],10,10)
   end
   
   def gui_opt_keybinds_button
-    @gui[:opt_keybinds_button]=Gtk::Button.new("Keybindings").set_size_request(200,50)
-    @gui[:opt_keybinds_button].signal_connect("clicked") { keybinds }
+    @gui[:opt_keybinds_button]=Gtk::Button.new("Skróty klawiszowe").set_size_request(200,50)
+    @gui[:opt_keybinds_button].signal_connect("clicked") { yield }
     @gui[:content].put(@gui[:opt_keybinds_button],210,10)
   end
   
   def gui_opt_awesome_button
     @gui[:opt_awesome_button]=Gtk::Button.new("AWESOME!!!!").set_size_request(200,50)
-    @gui[:opt_awesome_button].signal_connect("clicked") { puts "Awesome!" }
+    @gui[:opt_awesome_button].signal_connect("clicked") { yield }
     @gui[:content].put(@gui[:opt_awesome_button],410,10)
   end
   
@@ -33,7 +33,7 @@ class Tuxlang
       @gui[("opt_learning_ex"+id.to_s).to_sym].append_text("")
       exercises.each {|name| @gui[("opt_learning_ex"+id.to_s).to_sym].append_text(name) }
       @gui[("opt_learning_ex"+id.to_s).to_sym].active = unless @settings.exercises[id].nil?
-        a = exercises.rindex(@settings.exercises[id].to_s)+1
+        exercises.rindex(@settings.exercises[id].to_s)+1
       else
         0
       end
@@ -42,12 +42,8 @@ class Tuxlang
   end
   
   def gui_opt_save_bt
-    @gui[:opt_save_bt]=Gtk::Button.new("Zapisz").set_size_request(200,40)
-    @gui[:opt_save_bt].signal_connect("clicked") {
-      (0..7).each {|id| @settings.exercises[id] = @gui[("opt_learning_ex"+id.to_s).to_sym].active_text }
-      @settings.rep_ex = @gui[:opt_repetition_ex].active_text
-      @settings.save_info
-    }
+    @gui[:opt_save_bt]=Gtk::Button.new("Save").set_size_request(200,40)
+    @gui[:opt_save_bt].signal_connect("clicked") { yield }
     @gui[:content].put(@gui[:opt_save_bt],410,360)
   end
   

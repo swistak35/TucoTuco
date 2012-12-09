@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="res">
+    <file>database.png</file>
+    <file>exercises.png</file>
+    <file>exit.png</file>
+    <file>learning.png</file>
+    <file>logo_proj.png</file>
+    <file>options.png</file>
+    <file>results.png</file>
+  </qresource>
+</RCC>

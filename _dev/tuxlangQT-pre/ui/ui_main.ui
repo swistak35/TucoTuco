@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Main</class>
+ <widget class="QMainWindow" name="Main">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>607</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="exit_button">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>510</y>
+      <width>68</width>
+      <height>68</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../resources.qrc">
+      <normaloff>:/static_/static/exit.png</normaloff>:/static_/static/exit.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="options_button">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>510</y>
+      <width>68</width>
+      <height>68</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../resources.qrc">
+      <normaloff>:/static_/static/options.png</normaloff>:/static_/static/options.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="database_button">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>510</y>
+      <width>68</width>
+      <height>68</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../resources.qrc">
+      <normaloff>:/static_/static/database.png</normaloff>:/static_/static/database.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="results_button">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>510</y>
+      <width>68</width>
+      <height>68</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../resources.qrc">
+      <normaloff>:/static_/static/results.png</normaloff>:/static_/static/results.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="repetition_label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>136</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Monospace</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Powtórki</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="repetition_slider">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>40</y>
+      <width>221</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="repetition_button">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>70</y>
+      <width>101</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Repeat!</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="learning_label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>136</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Monospace</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Nauka</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="learning_value">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>240</y>
+      <width>62</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+    <property name="buddy">
+     <cstring>learning_slider</cstring>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="learning_category">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>160</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QSlider" name="learning_slider">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>200</y>
+      <width>221</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="learning_button">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>230</y>
+      <width>101</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Repeat!</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="repetition_max">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>80</y>
+      <width>62</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="exercises_combo">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>20</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QSlider" name="exercise_slider">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>70</y>
+      <width>221</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exercise_button">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>100</y>
+      <width>101</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Repeat!</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="exercise_value">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>110</y>
+      <width>62</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="repetition_value">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>20</y>
+      <width>62</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="learning_max">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>240</y>
+      <width>62</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionTerminator">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Terminator</string>
+   </property>
+   <property name="toolTip">
+    <string>Terminatorrr</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>repetition_slider</tabstop>
+  <tabstop>options_button</tabstop>
+  <tabstop>database_button</tabstop>
+  <tabstop>results_button</tabstop>
+  <tabstop>exit_button</tabstop>
+  <tabstop>repetition_button</tabstop>
+  <tabstop>learning_category</tabstop>
+  <tabstop>learning_slider</tabstop>
+  <tabstop>learning_button</tabstop>
+  <tabstop>exercises_combo</tabstop>
+  <tabstop>exercise_slider</tabstop>
+  <tabstop>exercise_button</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>exit_button</sender>
+   <signal>clicked()</signal>
+   <receiver>Main</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>763</x>
+     <y>543</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionTerminator</sender>
+   <signal>triggered()</signal>
+   <receiver>Main</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>database_button</sender>
+   <signal>clicked()</signal>
+   <receiver>actionTerminator</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>623</x>
+     <y>543</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>learning_button</sender>
+   <signal>clicked()</signal>
+   <receiver>Main</receiver>
+   <slot>slot1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>112</x>
+     <y>250</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>265</x>
+     <y>335</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>repetition_slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>repetition_value</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>140</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>170</x>
+     <y>28</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>learning_slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>learning_value</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>140</x>
+     <y>208</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>190</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>exercise_slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>exercise_value</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>650</x>
+     <y>78</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>700</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>repetition_button</sender>
+   <signal>clicked()</signal>
+   <receiver>Main</receiver>
+   <slot>repetition()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>80</x>
+     <y>83</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>303</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>learning_button</sender>
+   <signal>clicked()</signal>
+   <receiver>Main</receiver>
+   <slot>learn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>80</x>
+     <y>243</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>303</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>exercise_button</sender>
+   <signal>clicked()</signal>
+   <receiver>Main</receiver>
+   <slot>exercise()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>590</x>
+     <y>113</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>303</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>slot1()</slot>
+  <slot>repetition()</slot>
+  <slot>learn()</slot>
+  <slot>exercise()</slot>
+ </slots>
+</ui>

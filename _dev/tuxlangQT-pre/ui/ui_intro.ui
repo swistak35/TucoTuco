@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Intro</class>
+ <widget class="QWidget" name="Intro">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>30</y>
+     <width>231</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Intro, powitanie, obrazek</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="db_combo">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>230</y>
+     <width>141</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="launch_main_button">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>230</y>
+     <width>93</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Start!</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>launch_main_button</sender>
+   <signal>clicked()</signal>
+   <receiver>Intro</receiver>
+   <slot>launch_main()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>276</x>
+     <y>243</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>launch_main()</slot>
+ </slots>
+</ui>

@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="static_">
+    <file>static/database.png</file>
+    <file>static/exercises.png</file>
+    <file>static/exit.png</file>
+    <file>static/learning.png</file>
+    <file>static/logo_proj.png</file>
+    <file>static/options.png</file>
+    <file>static/results.png</file>
+  </qresource>
+</RCC>

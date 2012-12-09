@@ -1,13 +1,20 @@
 class Tuxlang
   def repetition(quantity)
-    @repetition_now = @database.words.select {|word| !word.rep.nil? and word.rep < Time.now }.shuffle[0..(quantity-1)]
-    @exercising_now = @repetition_now
-    @exercise = (0..(@repetition_now.count-1)).to_a
+    @exercising_now = shuffle_repetition_words quantity
+    @repetition_now = true
+    @exercise = (0..(@exercising_now.count-1)).to_a
     eval "ex_#{@settings.rep_ex}_main(@exercising_now[@exercise[0]],:good)"
   end
   
   def repetition_end
     @database.save_words
+    @repetition_now = false
     intro
+  end
+  
+  def shuffle_repetition_words(quantity)
+    @database.words.select do |word|
+      !word.rep.nil? and word.rep < Time.now
+    end.shuffle[0..(quantity-1)]
   end
 end

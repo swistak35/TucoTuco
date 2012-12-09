@@ -1,6 +1,6 @@
 class Tuxlang
   def gui_ln_rep_info_label
-    @gui[:ln_rep_info_label] = Gtk::Label.new("Powtórki: ").set_size_request(100,30)
+    @gui[:ln_rep_info_label] = Gtk::Label.new("Repetition: ").set_size_request(100,30)
     @gui[:content].put(@gui[:ln_rep_info_label],10,10)
   end
   
@@ -22,7 +22,7 @@ class Tuxlang
   end
   
   def gui_ln_rep_button
-    @gui[:ln_rep_button] = Gtk::Button.new("Powtarzaj").set_size_request(100,30)
+    @gui[:ln_rep_button] = Gtk::Button.new("Repetition").set_size_request(100,30)
     @gui[:ln_rep_button].signal_connect("clicked") do
       repetition(@gui[:ln_repq_list].active_text.to_i)
     end
@@ -30,12 +30,12 @@ class Tuxlang
   end
   
   def gui_ln_category_label
-    @gui[:ln_category_label] = Gtk::Label.new("Kategoria: ").set_size_request(100,30)
+    @gui[:ln_category_label] = Gtk::Label.new("Category: ").set_size_request(100,30)
     @gui[:content].put(@gui[:ln_category_label],10,250)
   end
   
   def gui_ln_quantity_label
-    @gui[:ln_quantity_label] = Gtk::Label.new("Ilosc: ").set_size_request(100,30)
+    @gui[:ln_quantity_label] = Gtk::Label.new("Quantity: ").set_size_request(100,30)
     @gui[:content].put(@gui[:ln_quantity_label],10,280)
   end
   
@@ -77,14 +77,14 @@ class Tuxlang
     @gui[:content].put(@gui[:ln_max_label],210,280)
   end
   
-  def gui_ln_learn_button(visible)
-    @gui[:ln_learn_button] = Gtk::Button.new("Ucz sie").set_size_request(100,30)
+  def gui_ln_learn_button
+    @gui[:ln_learn_button] = Gtk::Button.new("Learn").set_size_request(100,30)
     @gui[:ln_learn_button].signal_connect("clicked") { learning_new(@gui[:ln_category_list].active,@gui[:ln_quantity_list].active_text.to_i) }
     @gui[:content].put(@gui[:ln_learn_button],210,310) 
   end
   
   def gui_ln_continue_button(visible)
-    @gui[:ln_continue] = Gtk::Button.new("Kontynuuj").set_size_request(100,30)
+    @gui[:ln_continue] = Gtk::Button.new("Continue").set_size_request(100,30)
     @gui[:ln_continue].signal_connect("clicked") { learning_continue }
     @gui[:content].put(@gui[:ln_continue],310,310)
   end

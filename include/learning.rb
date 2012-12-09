@@ -13,12 +13,11 @@ class Tuxlang
       end
     end
     
-    
     continue = @learning_now.nil? ? false : true
-    learning_gui(max,@database.categories,true,continue)
+    learning_gui(max,@database.categories,continue)
   end
   
-  def learning_gui(max,categories,learn_visible,continue_visible)
+  def learning_gui(max,categories,continue_visible)
     gui_content_reset
     gui_ln_rep_info_label
     gui_ln_repq_list
@@ -29,7 +28,7 @@ class Tuxlang
     gui_ln_max_label
     gui_ln_category_list(categories)
     gui_ln_quantity_list
-    gui_ln_learn_button(learn_visible)
+    gui_ln_learn_button
     gui_ln_change_to_defaults
     gui_ln_continue_button(continue_visible)
     gui_window_update

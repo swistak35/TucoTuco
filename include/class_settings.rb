@@ -3,26 +3,35 @@ class Settings
   
   #Load settings
   def initialize(short)
-    @dir='/home/swistak35/Projekty/tuxlang/user/'+short+'/'
-    #@dir='~/.tuxlang/'+short+'/'
+    @short = short
+    @dir = '/home/swistak35/Projekty/Tucotuco/user/'+@short+'/'
+    #@dir = '~/.config/tucotuco/'+short+'/'
+    prepare_config_files
     load_info
+  end
+  
+  #Create .config, tucotuco, short, info file
+  def prepare_config_files
+    #Create .config dir
+    #Create tucotuco dir
+    #Create short dir
+    #Create info file
   end
   
   #Load info, last used category and amount of new words to learn
   def load_info
-    f = File.new(@dir+'info','r')
-    @last_quantity=f.gets.chop
-    @last_category=f.gets.chop.to_i
-    @exercises=f.gets.chop.split(",")
-    @last_repq=f.gets.chop
-    @rep_ex=f.gets.chop
-    f.close
+    info = File.readlines @dir+"info"
+    @last_quantity = info[0].chop
+    @last_category = info[1].chop.to_i
+    @exercises = info[2].chop.split(",")
+    @last_repq = info[3].chop
+    @rep_ex = info[4].chop
   end
   
   #Saving info.
   def save_info
     @exercises.delete("")
-    f = File.new(@dir+'info','w')
+    f = File.new @dir+'info', 'w'
     f.puts @last_quantity
     f.puts @last_category.to_i
     f.puts @exercises.join(",")
